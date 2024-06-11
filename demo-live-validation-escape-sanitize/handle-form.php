@@ -33,7 +33,8 @@ if($isReasonValid){
   $clean['reason'] = $_POST['reason'];
 }else{
   //Renvoie à la page du formulaire, sans le traiter
-  header('Location: /');
+  //Redirection vers la page d'accueil (/) avec une erreur en paramètre d'URL
+  header('Location: /?error=wrong_data');
   exit;
 }
 
