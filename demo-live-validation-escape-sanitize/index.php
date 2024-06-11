@@ -18,6 +18,10 @@
 
     <h1>Prise de rendez-vous</h1>
 
+    <?php if (isset($_GET['error'])) : ?>
+        <p style="color:red;">Impossible de confirmer votre rendez-vous. Merci de réessayer.</p>
+    <?php endif; ?>
+
     <form action="handle-form.php" method="POST">
         <div>
             <label for="first-name">Prénom :</label>
