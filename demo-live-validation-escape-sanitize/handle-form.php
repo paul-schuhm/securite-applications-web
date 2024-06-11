@@ -8,7 +8,7 @@
  * Données soumises via une requête POST sont fournies dans cette variable
  * super-globale 
  */
-var_dump($_POST);
+// var_dump($_POST);
 
 /**
  * Penser à bien séparer les données qui sont potentiellement dangereuses pour votre système
