@@ -69,6 +69,54 @@ if (!empty($matches)) {
   $clean['time'] = $matches[0];
 }
 
+//Autre méthode
+
+$allowedHours = [
+  '09:30',
+  '10:00',
+  '10:30',
+  '11:00',
+  '11:30',
+  '12:00',
+  '12:30',
+  '13:00',
+  '13:30',
+  '14:00',
+  '14:30',
+  '15:00',
+  '15:30',
+  '16:00',
+  '16:30',
+  '17:00',
+  '17:30',
+];
+
+if (in_array($time, $allowedHours)) {
+  $clean['time'] = $time;
+}
+
+//Prénom (Nom)
+
+$clean['first-name'] = $_POST['first-name'];
+
+
+//....
+
+
+//Fini de valider tous les champs. Le tableau $clean est rempli de données sécurisées
+
+//Traitement métier, rendre service en utilisant les données du client
+
+$firstName = $clean['first-name'];
+
+/**
+ * Dans le contexte de l'écriture du HTML, j'échappe les caractères dangereux (ici via la fonction htmlentities)
+ * qui transforme les caractères spéciaux du html (<, >, etc.) en entités HTML. Les entités HTML sont fréquemment 
+ * utilisées pour afficher des caractères réservés qui seraient autrement interprétés comme du code HTML ! 
+ * @link https://developer.mozilla.org/fr/docs/Glossary/Entity
+ */
+
+echo htmlentities($firstName) . ", votre rendez-vous a bien été confirmé";
 
 
 /**
@@ -76,7 +124,5 @@ if (!empty($matches)) {
  * super-globale 
  */
 // var_dump($_GET);
-
-
 //Inspecter les valeurs sécurisées
-var_dump($clean);
+// var_dump($clean);

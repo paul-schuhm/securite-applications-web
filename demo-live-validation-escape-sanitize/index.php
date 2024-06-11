@@ -55,6 +55,13 @@
         <input type="submit" value="Réserver">
     </form>
 
+
+    <script>
+        //Code Javascript
+        console.log('Execution du code Javascript')
+        alert('Hello !')
+    </script>
+
 </body>
 
 </html>
