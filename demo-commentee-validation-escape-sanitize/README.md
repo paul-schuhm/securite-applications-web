@@ -1,6 +1,6 @@
-# Démo (live) Validation, escape, sanitize
+# Démo : Validation, escape, sanitize. *101* de la sécurisation des applications web
 
-- [Démo (live) Validation, escape, sanitize](#démo-live-validation-escape-sanitize)
+- [Démo : Validation, escape, sanitize. *101* de la sécurisation des applications web](#démo--validation-escape-sanitize-101-de-la-sécurisation-des-applications-web)
   - [Techniques de base de sécurisation des données entrantes (input)](#techniques-de-base-de-sécurisation-des-données-entrantes-input)
   - [Identification, authentification et autorisation](#identification-authentification-et-autorisation)
   - [Bonnes pratiques générales](#bonnes-pratiques-générales)
