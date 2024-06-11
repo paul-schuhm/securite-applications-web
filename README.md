@@ -17,6 +17,7 @@ Sources du module Sécurité des applications web
 ## Démos
 
 - [Accéder à la démo live sur le traitement des données (validation, sanitize, escape)](./demo-live-validation-escape-sanitize/)
+- [Accéder à la démo commentée et documentée sur le traitement des données (validation, sanitize, escape)](./demo-commentee-validation-escape-sanitize/)
 - [Accéder à la démo Attaque Brute Force un système d'authentification](./demo-brute-force/), exemple de mini-projet illustrant un type d'attaque. S'en servir de base (plan) pour documenter une autre faille
 
 
