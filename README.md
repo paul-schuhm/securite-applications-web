@@ -38,8 +38,7 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 
 ### Ouvrages
 
-<img src="assets/hackers-handbook.jpg" width=300 height=350>
-<img src="assets/writing-secure-code.jpg" width=300 height=350>
+<img src="assets/hackers-handbook.jpg" width=300 height=350><img src="assets/writing-secure-code.jpg" width=300 height=350>
 
 - [Essential PHP Security](https://www.oreilly.com/library/view/essential-php-security/059600656X/), de Shiflett, publié chez O'Reilly, 2005. LP++
 - [The Web Application Hackers Handbook](https://www.amazon.fr/Web-Application-Hackers-Handbook-Exploiting/dp/1118026470), de  Dafydd Stuttard et Marcus Pinto, publié chez John Wiley & Sons Inc, 2011. LE+
