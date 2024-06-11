@@ -37,6 +37,7 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 - [Writing secure code, 2nd edition](https://www.amazon.com/Writing-Secure-Second-Developer-Practices/dp/0735617228), de  Michael Howard et David LeBlanc, publié chez Microsoft Press, 2003. LP++
 - [Threat Modeling: Designing for Security, 1st Edition ](https://www.amazon.fr/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998), d'Adam Shostack, publié chez Wiley, 2014. LI++. Voir également l'introduction au *threat modeling* dans le chapitre 4 de *Writing Secure code* 
 - [Web Security For Developers](https://www.amazon.fr/Web-Security-Developers-Malcolm-McDonald/dp/1593279949), de Malcolm Macdonald, publié chez No Starch Press, 2020. Introduction/Overview, couvre les menaces principales, pédagogique. Bien pour faire un tour d'horizon sans rentrer trop dans les détails et trouver des sujets à approfondir ensuite. LI
+- [Sécurité des applications web  : Stratégies offensives et défensives](https://www.editions-eni.fr/livre/securite-des-applications-web-strategies-offensives-et-defensives-9782409045127), de Malween LE GOFFIC, publié chez ENI Éditions, 2024
 
 ### Références/Standards/Audits
 
