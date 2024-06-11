@@ -12,6 +12,7 @@ Sources du module Sécurité des applications web
     - [Outils](#outils)
     - [Articles / Sur le web](#articles--sur-le-web)
     - [Conférences/Talks/Vidéos](#conférencestalksvidéos)
+    - [Légende bibliographie](#légende-bibliographie)
 
 
 ## Démos
@@ -43,7 +44,7 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 - [Writing secure code, 2nd edition](https://www.amazon.com/Writing-Secure-Second-Developer-Practices/dp/0735617228), de  Michael Howard et David LeBlanc, publié chez Microsoft Press, 2003. LP++
 - [Threat Modeling: Designing for Security, 1st Edition ](https://www.amazon.fr/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998), d'Adam Shostack, publié chez Wiley, 2014. LI++. Voir également l'introduction au *threat modeling* dans le chapitre 4 de *Writing Secure code* 
 - [Web Security For Developers](https://www.amazon.fr/Web-Security-Developers-Malcolm-McDonald/dp/1593279949), de Malcolm Macdonald, publié chez No Starch Press, 2020. Introduction/Overview, couvre les menaces principales, pédagogique. Bien pour faire un tour d'horizon sans rentrer trop dans les détails et trouver des sujets à approfondir ensuite. LI
-- [Sécurité des applications web  : Stratégies offensives et défensives](https://www.editions-eni.fr/livre/securite-des-applications-web-strategies-offensives-et-defensives-9782409045127), de Malween LE GOFFIC, publié chez ENI Éditions, 2024
+- [Sécurité des applications web  : Stratégies offensives et défensives](https://www.editions-eni.fr/livre/securite-des-applications-web-strategies-offensives-et-defensives-9782409045127), de Malween LE GOFFIC, publié chez ENI Éditions, 2024. LI+
 
 ### Références/Standards/Audits
 
@@ -86,3 +87,16 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 - [Same-origin policy: The core of web security, OWASP Wellington](https://www.youtube.com/watch?v=zul8TtVS-64&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=138), [la *Same Origin Policy (SOP)*](https://fr.wikipedia.org/wiki/Same-origin_policy) merveilleusement bien expliquée. La vidéo de référence sur le sujet. Une spécification implémentée par les navigateurs, à connaître (au moins vaguement) pour tous les développeurs (front ou back)
 - [Running an SQL Injection Attack - Computerphile ](https://www.youtube.com/watch?v=ciNHn38EyRc), une excellent démo d'injection SQL didactique, de Mike Pound, sur la très bonne chaîne [Computerphile](https://www.youtube.com/@Computerphile)
 - [Never click on a Link!](http://talks.php.net/show/penguicon1/1), slides de la présentation de Rasmus Lerdorf sur la sécurité d'une application web (PHP)
+
+
+### Légende bibliographie
+
+- *LP* : Livre Parcouru
+- *LE* : Livre Évoqué (entendu parler)
+- *LI* : Livre Inconnu
+- "+" : Recommandé
+- "++" : Fortement recommandé
+- "-" : Peu recommandé (rare que je la mentionne)
+- "--" : Non recommandé (rare que je la mentionne)
+
+> Inspiré de [Comment parler des livres que l'on a pas lu ?](http://www.leseditionsdeminuit.fr/livre-Comment_parler_des_livres_que_l_on_n_a_pas_lus__-2514-1-1-0-1.html), de Pierre Bayard, publié chez Éditions de Minuit, 2007
