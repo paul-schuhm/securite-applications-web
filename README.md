@@ -46,16 +46,16 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/), des synthèses sur les différents types d'attaque et leur prévention
 - [Sécurité : Chiffrement, hachage, signature ](https://www.cnil.fr/fr/securite-chiffrement-hachage-signature), publié par la CNIL
 - [NIST Special Publication 800-63B : Digital Identity Guidelines, Authentication and Lifecycle Management](https://pages.nist.gov/800-63-3/sp800-63b.html), document de référence publié par [le National Institute of Standards and Technology (NIST)](https://fr.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology) sur les recommandations liées à la gestion de l'identité en ligne et des systèmes d'authentification. 
-- [KeePassXC Application Security Review](https://molotnikov.de/keepassxc-review), de [Zaur Molotnikov](https://molotnikov.de/cv). Un audit du gestionnaire de mots de passe open source [KeePassXC](https://github.com/keepassxreboot/keepassxc). Contient de nombreuses informations utiles sur son fonctionnement et ses détails d'implémentation. [Télécharger le PDF (version 1.2)](https://molotnikov.de/docs/KeePassXC-Review-V1-Molotnikov.pdf)
 - [RFC 7519 : JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519), publié par l'IETF. Le document décrivant le standard JWT
-- [Norme de sécurité de l'industrie des cartes de paiement (PCI DSS)](https://fr.wikipedia.org/wiki/Norme_de_s%C3%A9curit%C3%A9_de_l%27industrie_des_cartes_de_paiement)
 
 ### Outils
 
 - [DAMN VULNERABLE WEB APPLICATION (DVWA)](https://github.com/digininja/DVWA), une application web PHP/MySQL extrêmement vulnérable. Son objectif principal est d'aider les professionnels de la sécurité à tester leurs compétences et leurs outils dans un environnement légal, d'aider les développeurs web à mieux comprendre les processus de sécurisation des applications web et d'aider à la fois les étudiants et les enseignants à apprendre la sécurité des applications web dans un environnement de classe contrôlé. [Regarder sur YouTube des usages du projet](https://www.youtube.com/results?search_query=Damn+Vulnerable+Web+Application+)
 - [hydra](https://www.kali.org/tools/hydra/), Hydra est un programme de craquage de mot de passe parallélisé qui supporte de nombreux protocoles pour attaquer
-- [Dépôt : démo Same Origin Policy](https://github.com/paul-schuhm/demo-same-origin-policy)
-- [Dépôt : démo JWT Authentification](https://github.com/paul-schuhm/demo-jwt)
+- [Dépôt : démo Same Origin Policy](https://github.com/paul-schuhm/demo-same-origin-policy), une démo de la Same Origin Policy
+- [Dépôt : démo JWT Authentification](https://github.com/paul-schuhm/demo-jwt), une démo de l'implémentation du standard JWT
+- [KeePassXC Application Security Review](https://molotnikov.de/keepassxc-review), de [Zaur Molotnikov](https://molotnikov.de/cv). Un audit du gestionnaire de mots de passe open source [KeePassXC](https://github.com/keepassxreboot/keepassxc). Contient de nombreuses informations utiles sur son fonctionnement et ses détails d'implémentation. [Télécharger le PDF (version 1.2)](https://molotnikov.de/docs/KeePassXC-Review-V1-Molotnikov.pdf)
+- [Xkpassword](https://beta.xkpasswd.net/), générateur de mots de passe basé sur [le comic *Password Strength* d'xkcd](https://xkcd.com/936/)
 
 
 ### Articles / Sur le web
