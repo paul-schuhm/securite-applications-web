@@ -36,8 +36,17 @@
             <input type="time" name="time" id="time">
         </div>
         <div>
-            <label for="age">Âge : </label>
-            <input type="number" name="age" id="age" min="0" max="200" required>
+            <label for="reason">Motif</label>
+            <select name="reason" id="reason">
+                <option selected value="consultation">Consultation</option>
+                <option value="follow-up">Suivi</option>
+                <option value="urgency">Urgence</option>
+                <option value="other">Autre</option>
+            </select>
+        </div>
+        <div>
+            <label for="nb-comp">Nombre d'accompagnants : </label>
+            <input type="number" name="nb-comp" id="nb-comp" value="0" title="Vous pouvez venir accompagné·e d'une ou deux personnes">
         </div>
         <input type="submit" value="Réserver">
     </form>
