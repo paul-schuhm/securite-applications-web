@@ -1,8 +1,8 @@
-# securite-applications-web
+# Sécurité des applications web
 
 Sources du module Sécurité des applications web
 
-- [securite-applications-web](#securite-applications-web)
+- [Sécurité des applications web](#sécurité-des-applications-web)
   - [Démos](#démos)
   - [Checklists](#checklists)
   - [Bibliographie](#bibliographie)
