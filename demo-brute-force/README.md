@@ -83,3 +83,4 @@ Inspecter le fichier de log (`login_attempts.txt`) pour déceler une activité i
 - [Blocking Brute Force Attacks](https://owasp.org/www-community/controls/Blocking_Brute_Force_Attacks), stratégies pour se défendre d'une attaque brute force, publié par l'OWASP
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html), des synthèses sur les moyens de se protéger des attaques principales
 - [Force brute (attaque informatique)](https://www.cnil.fr/fr/definition/force-brute-attaque-informatique), publié par la CNIL
+- [hydra](https://www.kali.org/tools/hydra/), Hydra est un programme de craquage de mot de passe parallélisé qui supporte de nombreux protocoles pour attaquer. Un outil beaucoup plus perfectionné et puissant que notre petit script de démo d'attaque par dictionnaire
