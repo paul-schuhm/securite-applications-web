@@ -33,15 +33,18 @@ Le serveur **doit vérifier toute donnée** soumise via une requête `GET` (para
 
 Pour **sécuriser les données entrantes** dans le service web, il existe trois stratégies (qui peuvent se compléter) :
 
-- **La validation** : la valeur est soumise (présente) et doit est égale à une valeur énumérée dans une liste de valeurs acceptées (*white list*) (exemple : un `select`). Peut être aussi le résultat d'un *parsing* (chaîne JSON valide, chaîne représente bien un entier, etc.) **Le cas idéal**, **à privilégier dès que possible**. S'applique sur les listes de choix, domaine de validité (par exemple un nombre paire, ou un nombre compris entre 0 et 100, etc.), pattern/format attendu précis, etc.
-- **L'échappement** : si la donné doit être écrite quelque part, sur un document HTML, dans une base de données, etc. **le code qui manipule les données s'assure de neutraliser tous les caractères spéciaux pour rendre la donnée inoffensive dans son contexte**, *sans modifier la donnée originale*;
-- **La *sanitization*/le filtrage** : *altérer*, modifier les données entrantes pour leur retirer tout aspect dangereux (caractères spéciaux). **A ses limites, à utiliser avec parcimonie**. Il n'y a pas de caractères dangereux par essence, **cela dépend toujours du contexte d'utilisation**. Par exemple, la valeur `<script>//Some evil JS</script>` est dangereuse dans le contexte d'une page HTML, mais inoffensive dans le contexte d'une requête SQL.
+- **La validation** : la valeur est soumise (présente) et doit est égale à une valeur énumérée dans une liste de valeurs acceptées (*white list*) (exemple : un `select`). Peut être aussi le résultat d'un *parsing* (chaîne JSON valide, chaîne représente bien un entier, instanciation d'un objet à partir des données fournies et laisser agir le constructeur/exceptions comme "validateur", etc.) ou d'un pattern matching par expression régulière (à utiliser avec précaution !). **Le cas idéal**, **à privilégier dès que possible**. S'applique sur :
+  - Les listes de choix
+  - Un domaine de validité bien défini (par exemple un nombre paire, ou un nombre compris entre 0 et 100, etc.)
+  - Un pattern/format strict attendu
+- **L'échappement** : Lorsque la donné est écrite quelque part, sur un document HTML, dans une base de données, etc. **le code qui manipule les données s'assure de neutraliser tous les caractères spéciaux pour rendre la donnée inoffensive dans son contexte**, *sans modifier la donnée originale*;
+- **La *sanitization*/le filtrage** : *altérer*, modifier les données entrantes pour leur retirer tout aspect dangereux (caractères spéciaux). **A ses limites, à utiliser avec parcimonie**. Il n'y a pas de caractères dangereux *par essence*, **cela dépend toujours du contexte d'utilisation**. Par exemple, la valeur `<script>//Some evil JS</script>` est dangereuse dans le contexte d'une page HTML, mais inoffensive dans le contexte d'une requête SQL.
 
 ## Identification, authentification et autorisation
 
-- **Identification** : est-ce que le système vous connaît ?
-- **Authentification** : est-ce que vous êtes bien l'utilisateur/le client que vous prétendez être ?
-- **Autorisation** : est-ce que vous avez la permission (ou privilège) d'effectuer cette action ?
+- **Identification** : Est-ce que le système vous connaît ?
+- **Authentification** : Est-ce que vous êtes bien l'utilisateur/le client que vous prétendez être ?
+- **Autorisation** : Est-ce que vous avez la permission (ou privilège) d'effectuer cette action ?
 
 
 ## Bonnes pratiques générales
@@ -56,17 +59,16 @@ Pour **sécuriser les données entrantes** dans le service web, il existe trois 
 
 > Légende Type : **A**lphabétique, **N**umérique, **A**lpha**N**umérique, **B**ooléen, **D**ate (time)
 
-- Lorsque vous développer vos formulaires, ne placez pas les contraintes (qui servent uniquement pour le confort du client) dans les inputs HTML directement pour faciliter vos tests des inputs. **Implémenter *d'abord* les contraintes sur les inputs côté serveur**. Une fois que votre validation est complètement implémentée, ajouter les contraintes via des attributs HTML côté client (en utilisant éventuellement du Javascript pour des contraintes plus sophistiquées)
-- **Échapper toujours les caractères** quand vous écrivez des **données externes** quelque-part (document JSON, HTML, requête SQL, etc.). Utiliser les règles d'échappement appropriés au contexte donné
+- Lorsque vous développez vos formulaires, ne placez pas les contraintes (qui servent uniquement pour le confort du client) dans les inputs HTML directement afin de faciliter vos tests des inputs. **Implémenter *d'abord* les contraintes sur les inputs côté serveur**. Une fois que votre validation est *complètement* implémentée, ajouter les contraintes via des attributs HTML côté client (en utilisant éventuellement du Javascript pour des contraintes plus sophistiquées)
+- **Échapper toujours les caractères** quand vous écrivez des **données externes** quelque-part (document JSON, HTML, requête SQL, etc.). Utiliser les règles d'échappement appropriés au contexte donné. Chaque contexte a son jeu de caractères réservés et potentiellement exploitables.
 
 ## Validate (*white list*)
 
-La validation est le cas idéal et doit **être utilisée dès que possible**. Cela consiste à comparer la valeur fournie à une liste de valeurs acceptées. Si la valeur fournie n'est pas dans la liste, elle est rejetée (*liste blanche*)
-
+La validation est le cas idéal et doit **être utilisée autant que possible**. Cela consiste à comparer la valeur fournie à une liste de valeurs acceptées. Si la valeur fournie n'est pas dans la liste ou dans un domaine de validité bien définie, elle est rejetée (*liste blanche*)
 
 ### Pros
 
-- **Le plus sécurisé**. Le domaine de validité est bien défini, les données envoyées par le client ne sont pas directement utilisées mais juste comparées aux valeurs admises. Le top.
+- **Le plus sécurisé**. Le domaine de validité est bien défini, les données envoyées par le client ne sont pas directement manipulées ou altérées mais juste *comparées* aux valeurs admises. Le top.
 
 ### Cons
 
@@ -86,18 +88,19 @@ La validation est le cas idéal et doit **être utilisée dès que possible**. C
 
 ## *Sanitize*/Purger/Nettoyer
 
-Lorsqu'il n'est pas possible de valider des données (un nom, un prénom par exemple), i.e quand le nombre possible de réponses est *impossible à déterminer à l'avance*, on peut ajouter une couche de *filtrage* des données. Filtrer (*sanitize*) les données consister **à modifier les données entrantes pour les rendre inoffensives, généralement en supprimant ou remplaçant des caractères**. Par exemple, en retirant tous les caractères spéciaux qui pourraient être utilisés pour former des balises HTML.
+Lorsqu'il n'est pas possible de valider des données (un nom, un prénom par exemple), i.e quand le nombre possible de réponses est *impossible à déterminer à l'avance*, on peut ajouter une couche de *filtrage* des données. Filtrer (*sanitize*) les données consister **à modifier les données entrantes pour les rendre inoffensives, généralement en supprimant ou remplaçant des caractères**. Par exemple, en retirant tous les caractères spéciaux qui pourraient être utilisés pour former des balises HTML. Par exemple, si vous autorisez les clients à publier des posts en HTML (éditeur riche) vous pouvez définir une liste de balises HTML autorisées (a, p, img, etc.) et filtrer les autres (ce que fait GitHub ou StackOverflow par exemple)
 
 ### Pros
 
 - Appliquer des règles complexes sur des inputs;
 - S'assurer de l'absence de certains caractères identifiés *pour une raison bien définie*;
+- Plus flexible pour l'utilisateur : si une partie des données n'est pas valide, au lieu de tout rejeter, on conserve les parties valides
 
 ### Cons
 
 - **Limitée** : *Impossible* d'anticiper de manière exhaustive tous les inputs possibles;
 - **Complexe** : Règles de filtrage peuvent être complexes et elles-même détournées et exploitées;
-- Altère les inputs du client (brise la sécurité *Intégrité des données*)
+- Altère les inputs du client (*Intégrité des données* menacée);
 
 
 ## Lancer le projet
@@ -116,9 +119,9 @@ Se rendre à l'URL `http://localhost:8990`
 
 ## Liens utiles
 
-- [Never click on a link !](http://talks.php.net/show/penguicon1/0), talk de Rasmus Ledorf, auteur de la première version de PHP
-- [Don’t try to sanitize input. Escape output.](https://benhoyt.com/writings/dont-sanitize-do-escape/), de Ben Hoyt. Pourquoi faut-il préférer l'échappent au filtrage des input et quels impacts sur la sécurité
-- [Parse, don’t validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/), d'Alexis King
+- [Never click on a link !](http://talks.php.net/show/penguicon1/0), talk de Rasmus Ledorf, auteur de la première version de PHP;
+- [Don’t try to sanitize input. Escape output.](https://benhoyt.com/writings/dont-sanitize-do-escape/), de Ben Hoyt. Pourquoi faut-il préférer l'échappement au filtrage des input et quels impacts sur la sécurité;
+- [Parse, don’t validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/), d'Alexis King;
 - [File upload security and good practices checklist](https://github.com/dilaouid/shitshit/blob/main/backend-good-practices-security/FILE_UPLOAD.md), une checklist de bonnes pratiques concernant l'upload (téléversement) de fichiers vers votre serveur
 - [Dépôt : démo de quelques fonctions utiles de sanitization des données en PHP](https://github.com/paul-schuhm/developpement-cote-serveur-php/blob/main/demos/web/fonctions-utiles-web.php)
 

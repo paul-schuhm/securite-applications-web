@@ -82,13 +82,14 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 - [Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html), publié par l'OWASP
 - [File upload security and good practices checklist](https://github.com/dilaouid/shitshit/blob/main/backend-good-practices-security/FILE_UPLOAD.md), une checklist de bonnes pratiques concernant l'upload (téléversement) de fichiers vers votre serveur
 - [xkcd explained : 936: Password Strength](https://www.explainxkcd.com/wiki/index.php/936:_Password_Strength)
+- [xkcd explained : 327: Exploits of a Mom](https://www.explainxkcd.com/wiki/index.php/327:_Exploits_of_a_Mom)
 
 ### Conférences/Talks/Vidéos
 
-- [Building the ultimate login and signup](https://www.youtube.com/watch?v=E25KxLKwY-M&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=18&t=1270s), vous pensiez que construire un formulaire de connexion/inscription sécurisé à une application web est nue tâche triviale ? Ici vous verrez que non, un décorticage méthodique de toutes les potentielles failles de sécurité à prévoir quand on design un système d'authentification. Donné par Matt Cotterelll, un ingénieur en sécurité basé en Nouvelle Zélande
-- [Same-origin policy: The core of web security, OWASP Wellington](https://www.youtube.com/watch?v=zul8TtVS-64&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=138), [la *Same Origin Policy (SOP)*](https://fr.wikipedia.org/wiki/Same-origin_policy) merveilleusement bien expliquée. La vidéo de référence sur le sujet. Une spécification implémentée par les navigateurs, à connaître (au moins vaguement) pour tous les développeurs (front ou back)
-- [Running an SQL Injection Attack - Computerphile ](https://www.youtube.com/watch?v=ciNHn38EyRc), une excellent démo d'injection SQL didactique, de Mike Pound, sur la très bonne chaîne [Computerphile](https://www.youtube.com/@Computerphile)
-- [Never click on a Link!](http://talks.php.net/show/penguicon1/1), slides de la présentation de Rasmus Lerdorf sur la sécurité d'une application web (PHP)
+- [Building the ultimate login and signup](https://www.youtube.com/watch?v=E25KxLKwY-M&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=18&t=1270s), vous pensiez que construire un formulaire de connexion/inscription sécurisé à une application web est nue tâche triviale ? Ici vous verrez que non, un décorticage méthodique de toutes les potentielles failles de sécurité à prévoir quand on design un système d'authentification. Donné par Matt Cotterell, un ingénieur en sécurité basé en Nouvelle Zélande
+- [Same-origin policy: The core of web security, OWASP Wellington](https://www.youtube.com/watch?v=zul8TtVS-64&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=138), [la *Same Origin Policy (SOP)*](https://fr.wikipedia.org/wiki/Same-origin_policy) merveilleusement bien expliquée. La vidéo de référence sur le sujet. Une spécification implémentée par les navigateurs, à connaître (au moins vaguement) pour tous les développeur·euse·s (front ou back)
+- [Running an SQL Injection Attack - Computerphile ](https://www.youtube.com/watch?v=ciNHn38EyRc), une excellent démo d'injection SQL didactique, de [Mike Pound](https://www.nottingham.ac.uk/research/beacons-of-excellence/future-food/meet-the-team/michael-pound/index.aspx), sur la très bonne chaîne [Computerphile](https://www.youtube.com/@Computerphile)
+- [Never click on a Link!](http://talks.php.net/show/penguicon1/1), slides de la présentation de Rasmus Lerdorf sur la sécurité d'une application web, notamment sur l'attaque via des URL (PHP)
 
 
 ### Légende bibliographie
