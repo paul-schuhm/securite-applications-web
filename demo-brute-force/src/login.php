@@ -8,7 +8,7 @@
  * Simule les utilisateurs du système (login => password)
  */
 $users = [
-    'jdoe' => 'password'
+    'jdoe' => '12345'
 ];
 
 /**

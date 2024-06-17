@@ -9,6 +9,8 @@ Sources du module Sécurité des applications web
   - [Bibliographie](#bibliographie)
     - [Ouvrages](#ouvrages)
     - [Références/Standards/Audits](#référencesstandardsaudits)
+      - [Sécurité](#sécurité)
+      - [RGPD](#rgpd)
     - [Outils](#outils)
     - [Articles / Sur le web](#articles--sur-le-web)
     - [Conférences/Talks/Vidéos](#conférencestalksvidéos)
@@ -50,13 +52,29 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 
 ### Références/Standards/Audits
 
+#### Sécurité
+
 - [OWASP Top Ten : Top 10 Web Application Security Risks](https://owasp.org/www-project-top-ten/), document standardisé des risques de sécurité des applications web. Liste et classifie l'ensemble de risques reconnus comme critiques pour les applications web 
 - [Common Weakness Enumeration (CWE)](https://cwe.mitre.org/about/index.html), un groupe de travail qui maintient une liste des vulnérabilités connues des software et hardware
-- [OWASP : Attacks](https://owasp.org/www-community/attacks/), la liste des attaques les mieux connues
 - [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/), des synthèses sur les différents types d'attaque et leur prévention
+- [OWASP : Input Validation Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html)
+- [OWASP : Attacks](https://owasp.org/www-community/attacks/), la liste des attaques les mieux connues
+- [OWASP : Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html), conseils sur la gestion des secrets;
+- [OWASP : Cryptographic Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html), conseils sur le stockage de données chiffrées;
+- [OWASP : Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html), conseils sur le stockage de mots de passe;
 - [Sécurité : Chiffrement, hachage, signature ](https://www.cnil.fr/fr/securite-chiffrement-hachage-signature), publié par la CNIL
 - [NIST Special Publication 800-63B : Digital Identity Guidelines, Authentication and Lifecycle Management](https://pages.nist.gov/800-63-3/sp800-63b.html), document de référence publié par [le National Institute of Standards and Technology (NIST)](https://fr.wikipedia.org/wiki/National_Institute_of_Standards_and_Technology) sur les recommandations liées à la gestion de l'identité en ligne et des systèmes d'authentification. 
+- [KeePassXC Application Security Review](https://molotnikov.de/keepassxc-review), de [Zaur Molotnikov](https://molotnikov.de/cv). Un audit du gestionnaire de mots de passe open source [KeePassXC](https://github.com/keepassxreboot/keepassxc). Contient de nombreuses informations utiles sur son fonctionnement et ses détails d'implémentation. [Télécharger le PDF (version 1.2)](https://molotnikov.de/docs/KeePassXC-Review-V1-Molotnikov.pdf)
 - [RFC 7519 : JSON Web Token (JWT)](https://datatracker.ietf.org/doc/html/rfc7519), publié par l'IETF. Le document décrivant le standard JWT
+
+#### RGPD
+
+- [Guide RGPD du développeur](https://www.cnil.fr/fr/guide-rgpd-du-developpeur), publié par la CNIL
+- [Guide RGPD de l'équipe de développement](https://lincnil.github.io/Guide-RGPD-du-developpeur/), publié par la CNIL. Plus récent
+- [Guide de la sécurité des données personnelles](https://www.cnil.fr/fr/guide-de-la-securite-des-donnees-personnelles), publié par la CNIL
+- [Techniques d'anonymisation des données](https://www.cnil.fr/sites/cnil/files/atoms/files/wp216_fr.pdf), 
+- [Check list : Évaluer le niveau de sécurité des données personnelles de votre organisme](https://www.cnil.fr/sites/cnil/files/2024-03/guide_securite_donnees_personnelles_checklist.pdf), publiée par la CNIL
+- [Guide pratique : Les durées de conservation](https://www.cnil.fr/sites/cnil/files/atoms/files/guide_durees_de_conservation.pdf), publié par la CNIL. Pour bien définir la durée de conservation des données personnelles
 
 ### Outils
 
