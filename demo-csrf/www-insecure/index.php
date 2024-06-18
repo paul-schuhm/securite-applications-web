@@ -1,5 +1,4 @@
 <?php
-
 /**
  * L'utilisateur est authentifié, on dépose un cookie
  * qui permet de l'identifier de manière unique.

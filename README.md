@@ -1,6 +1,6 @@
 # Sécurité des applications web
 
-Sources du module Sécurité des applications web
+Sources du module *Sécurité des applications web*. Ce module constitue une *introduction* à la sécurisation des sites et applications sur le web.
 
 - [Sécurité des applications web](#sécurité-des-applications-web)
   - [Démos](#démos)
@@ -27,17 +27,16 @@ Sources du module Sécurité des applications web
 
 ## Checklists
 
-> À venir
+[Accéder à une checklist de mesures de sécurité](./checklist.md)
 
 ## Lexique
 
-> À venir
+[Accéder au lexique du cours](./lexique.md)
+
 
 ## Bibliographie
 
-> Sera complétée d'ici la fin du cours
-
-Ressources pour approfondir le module *Sécurité des applications web*.
+Quelques ressources pour approfondir le module *Sécurité des applications web*.
 
 ### Ouvrages
 
@@ -49,7 +48,7 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 - [Writing secure code, 2nd edition](https://www.amazon.com/Writing-Secure-Second-Developer-Practices/dp/0735617228), de  Michael Howard et David LeBlanc, publié chez Microsoft Press, 2003. Tout le livre est bon. Voir *partie II, chapitre 13* pour des problèmes spécifiques au web. LP++
 - [Threat Modeling: Designing for Security, 1st Edition ](https://www.amazon.fr/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998), d'Adam Shostack, publié chez Wiley, 2014. LI++. Voir également l'introduction au *threat modeling* dans le chapitre 4 de *Writing Secure code* 
 - [Web Security For Developers](https://www.amazon.fr/Web-Security-Developers-Malcolm-McDonald/dp/1593279949), de Malcolm Macdonald, publié chez No Starch Press, 2020. Introduction/Overview, couvre les menaces principales, pédagogique. Bien pour faire un tour d'horizon sans rentrer trop dans les détails et trouver des sujets à approfondir ensuite. LI
-- [Sécurité des applications web  : Stratégies offensives et défensives](https://www.editions-eni.fr/livre/securite-des-applications-web-strategies-offensives-et-defensives-9782409045127), de Malween LE GOFFIC, publié chez ENI Éditions, 2024. LI+
+- [Sécurité des applications web  : Stratégies offensives et défensives](https://www.editions-eni.fr/livre/securite-des-applications-web-strategies-offensives-et-defensives-9782409045127), de Malween Le Goffic, publié chez ENI Éditions, 2024. LI+
 
 ### Références/Standards/Audits
 
@@ -106,7 +105,7 @@ Ressources pour approfondir le module *Sécurité des applications web*.
 ### Conférences/Talks/Vidéos
 
 - [Building the ultimate login and signup](https://www.youtube.com/watch?v=E25KxLKwY-M&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=18&t=1270s), vous pensiez que construire un formulaire de connexion/inscription sécurisé à une application web est nue tâche triviale ? Ici vous verrez que non, un décorticage méthodique de toutes les potentielles failles de sécurité à prévoir quand on design un système d'authentification. Donné par Matt Cotterell, un ingénieur en sécurité basé en Nouvelle Zélande
-- [Same-origin policy: The core of web security, OWASP Wellington](https://www.youtube.com/watch?v=zul8TtVS-64&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=138), [la *Same Origin Policy (SOP)*](https://fr.wikipedia.org/wiki/Same-origin_policy) merveilleusement bien expliquée. La vidéo de référence sur le sujet. Une spécification implémentée par les navigateurs, à connaître (au moins vaguement) pour tous les développeur·euse·s (front ou back)
+- [Same-origin policy: The core of web security, OWASP Wellington](https://www.youtube.com/watch?v=zul8TtVS-64&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=138), [la *Same Origin Policy (SOP)*](https://fr.wikipedia.org/wiki/Same-origin_policy) merveilleusement bien expliquée. La vidéo de référence sur le sujet. Une spécification implémentée par les navigateurs, à connaître (au moins vaguement) pour tous les développeur·euse·s (front ou back). **Visionnage recommandé**
 - [Running an SQL Injection Attack - Computerphile ](https://www.youtube.com/watch?v=ciNHn38EyRc), une excellent démo d'injection SQL didactique, de [Mike Pound](https://www.nottingham.ac.uk/research/beacons-of-excellence/future-food/meet-the-team/michael-pound/index.aspx), sur la très bonne chaîne [Computerphile](https://www.youtube.com/@Computerphile)
 - [Never click on a Link!](http://talks.php.net/show/penguicon1/1), slides de la présentation de Rasmus Lerdorf sur la sécurité d'une application web, notamment sur l'attaque via des URL (PHP)
 
