@@ -58,7 +58,7 @@ S'assurer que le système est protégé contre la dégradation ou l'indisponibil
 
 ## Échappement (*Escape*)
 
-Stratégie de sécurisation d'un [input](#input) à l'écriture. 
+Stratégie de sécurisation d'un [input](#donnée-entrante-input) à l'écriture. 
 
 Le code qui manipule la donnée entrante s'assure de neutraliser tous les caractères spéciaux qu'elle pourrait contenir pour la rendre inoffensive dans son contexte d'utilisation, *sans la modifier*.
 
@@ -81,7 +81,7 @@ Le code qui manipule la donnée entrante s'assure de neutraliser tous les caract
 
 ## Filtrage/Assainissement (*Sanitize*)
 
-Stratégie de sécurisation d'un [input](#input). 
+Stratégie de sécurisation d'un [input](#donnée-entrante-input). 
 
 Altérer, modifier une donnée entrante pour lui *retirer* tout aspect dangereux (caractères spéciaux et réservés).
 
@@ -129,7 +129,7 @@ Autorisation octroyée à un agent authentifié d'effectuer une action.
 
 ## Validation (*Validate*)
 
-Stratégie de sécurisation d'un [input](#input). 
+Stratégie de sécurisation d'un [input](#donnée-entrante-input). 
 
 Cette *procédure* vérifie que la valeur est présente et est une valeur renseignée dans une liste de valeurs acceptées (*white list*), définie par un domaine de validité, par un *pattern* ou par *parsing* (chaîne JSON valide, chaîne représente bien un entier, délégation au constructeur d'un objet etc.).
 

@@ -36,6 +36,7 @@
 - Aucune donnée sensible n'est conservée en claire en base de données []
 - Le système utilise des algorithmes de *hashage* robustes comme [Argon2](https://fr.wikipedia.org/wiki/Argon2), [scrypt](https://fr.wikipedia.org/wiki/Scrypt) ou [bcrypt](https://fr.wikipedia.org/wiki/Bcrypt) []
 - Le système utilise des algorithmes de chiffrement robustes comme [AES 256 bits](https://fr.wikipedia.org/wiki/Advanced_Encryption_Standard) (128 minimum) []
+- Le système utilise [un *salt*](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html#salting) (dynamique ou statique) pour ses opérations de *hashage* []
 - Le système n'utilise pas de générateur aléatoire non sécurisé (ex: `rand()` en C, `Math.random()` en Java, `random()` en Python, etc.) []
 - Etc.
 
