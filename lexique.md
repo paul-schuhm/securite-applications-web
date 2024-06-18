@@ -5,6 +5,7 @@ Liste des définitions des termes, concepts utilisés dans le cours, dans le dom
 - [Lexique](#lexique)
   - [Auditabilité (*Audit*)](#auditabilité-audit)
   - [Authentification](#authentification)
+  - [Chiffrement (*Encryption*)](#chiffrement-encryption)
   - [Cohérence (*Consistency*)](#cohérence-consistency)
   - [Confidentialité (*Confidentiality*)](#confidentialité-confidentiality)
   - [Disponibilité (*Availability*)](#disponibilité-availability)
@@ -12,6 +13,7 @@ Liste des définitions des termes, concepts utilisés dans le cours, dans le dom
   - [Donnée entrante (*Input*)](#donnée-entrante-input)
   - [Faille](#faille)
   - [Filtrage/Assainissement (*Sanitize*)](#filtrageassainissement-sanitize)
+  - [Hachage (Hashing)](#hachage-hashing)
   - [Intégrité (*Data Integrity*)](#intégrité-data-integrity)
   - [Identification](#identification)
   - [Isolation](#isolation)
@@ -35,6 +37,12 @@ S'assurer qu'il est possible de déterminer la cause d'un problème, d'une panne
 ## Authentification
 
 *Procédure* par laquelle le système reconnaît que l'agent est bien celui qu'il prétend être.
+
+## Chiffrement (*Encryption*)
+
+Une fonction de chiffrement cryptographique est un algorithme qui transforme des données lisibles (appelées texte en clair) en une forme inintelligible (appelée texte chiffré) à l'aide d'une *clé* de chiffrement. Le but de ce processus est de protéger la confidentialité des données en les rendant inaccessibles à toute personne qui ne possède pas la clé de déchiffrement correspondante.
+
+Contrairement à [une fonction de hashage](#hachage-hashing), [une fonction de chiffrement](https://fr.wikipedia.org/wiki/Cryptographie_sym%C3%A9trique) est *réversible* (le but est de pouvoir décoder la valeur encodée).
 
 ## Cohérence (*Consistency*)
 
@@ -88,6 +96,11 @@ Stratégie de sécurisation d'un [input](#donnée-entrante-input).
 Altérer, modifier une donnée entrante pour lui *retirer* tout aspect dangereux (caractères spéciaux et réservés).
 
 > A ses limites : en effet, aucune donnée n'est "intrinsèquement" dangereuse, cela dépend dans quel contexte elle est manipulée et à quoi elle sert. Préférer la validation et l'échappement quand c'est possible.
+
+
+## Hachage (Hashing)
+
+Une fonction de hachage cryptographique est une fonction de hachage qui, à une donnée de taille arbitraire, associe une image (valeur) de taille fixe, et dont une propriété essentielle est qu'elle est pratiquement *impossible à inverser*([non bijective](https://fr.wikipedia.org/wiki/Bijection)). On dit qu'une telle fonction est à *sens unique*.
 
 ## Intégrité (*Data Integrity*)
 
