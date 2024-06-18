@@ -79,6 +79,8 @@ Le code qui manipule la donnée entrante s'assure de neutraliser tous les caract
 
 > Synonyme : défaut, faiblesse, lacune
 
+> Une faille peut résulter d'une anomalie, d'un bug, d'un oubli, d'une méconnaissance
+
 ## Filtrage/Assainissement (*Sanitize*)
 
 Stratégie de sécurisation d'un [input](#donnée-entrante-input). 
