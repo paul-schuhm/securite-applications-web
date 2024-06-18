@@ -33,7 +33,7 @@
 
     <blockquote>Sur cette page, le formulaire cache un formulaire vers le site WWW pour supprimer les données de l'utilisateur (<code>POST WWW/delete.php</code>). L'attaquant compte sur le fait qu'il soit actuellement authentifié sur ce site via le cookie <code>PHPSESSID</code> présent dans son navigateur.</blockquote>
 
-    <blockquote>Cette attaque pourrait être menée via du JS (en émettant une requête avec <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a>. Mais si le cookie est en mode <code>httponly</code> le JS ne peut pas le manipuler et l'attaque échouerait. Via un form, comme ici, la requête <code>POST</code> émise emporte toujours le cookie avec</blockquote>
+    <blockquote>Cette attaque pourrait aussi être menée via du Javascript (en émettant une requête avec <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">XMLHttpRequest</a> <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch</a>.</blockquote>
 
 </body>
 
