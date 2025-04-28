@@ -52,31 +52,81 @@ var_dump($time);
 // Syntaxe : preg_match(regex, variable à tester, tableau des matchs trouvés)
 //Tester les regex via des tests unitaires sur tout un tas de données différentes
 preg_match('/^(09|1[0-7]):(00|30)/', $time, $matches);
-if(!empty($matches)){
+if (!empty($matches)) {
     $clean['hour'] = $matches[0]; //ex: 10:30
 }
 
 //Alternative : énumération explicite des valeurs admises (si possible)
 //Avantages : simple, facile à comprendre et à modifier, cas spéciaux métiers simple à intégrer (ajouter/retirer valeurs)
-$allowed_hours = [
-    '09:30',
-    '10:00',
-    '10:30',
-    '11:00',
-    '11:30',
-    '12:00',
-    '12:30',
-    '13:00',
-    '13:30',
-    '14:00',
-    '14:30',
-    '15:00',
-    '15:30',
-    '16:00',
-    '16:30',
-    '17:00',
-    '17:30',
-];
-
+// $allowed_hours = [
+//     '09:30',
+//     '10:00',
+//     '10:30',
+//     '11:00',
+//     '11:30',
+//     '12:00',
+//     '12:30',
+//     '13:00',
+//     '13:30',
+//     '14:00',
+//     '14:30',
+//     '15:00',
+//     '15:30',
+//     '16:00',
+//     '16:30',
+//     '17:00',
+//     '17:30',
+// ];
 // if(in_array($_POST['time'], $allowed_hours)){
 // }
+
+//. Validation de la date (constructeur d'un objet)
+//Si la chaine fournie au constructeur de l'objet DateTime n'est pas au format attendue
+//, une exception sera levée.
+try {
+    $date = new DateTime($_POST['date'] . ' ' . $clean['hour']);
+    //Vérifier que la date > aujourd'hui
+    //Vérifier que c'est un jour d'ouverture du cabinet (lundi au vendredi)
+    //Si je passe tous les tests, alors je l'ajoute a $clean
+    $clean['date'] = $date;
+} catch (DateMalformedStringException $exception) {
+    //Faire qqchose au besoin
+}
+
+//Etc...
+
+//Sanitization et échappement
+
+
+//Champs présents est aussi une validation !
+$requiredData = ['firstname', 'lastname', 'sms_reminder', 'nb_acc'];
+$cleanData = array_keys($clean);
+//...
+//Si toutes les clefs requises $requiredData sont présentes dans $cleanData, alors le rendez-vous peut être pris (déployer la logique métier en utilisant $clean)
+
+$message = sprintf(
+    "%s %s, votre rendez-vous a bien été confirmé pour le %s à %.",
+    $clean['firstname'],
+    $clean['lastname'],
+    ($clean['date'])->format('d/m/Y'),
+    $clean['hour']
+);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rendez-vous validé</title>
+</head>
+
+<body>
+    <h1>Rendez-vous validé</h1>
+    <p>
+        <?php echo $message;?>
+    </p>
+</body>
+
+</html>
