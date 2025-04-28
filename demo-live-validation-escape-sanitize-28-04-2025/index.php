@@ -15,7 +15,7 @@
         <!-- Prénom -->
         <div>
             <label for="firstname">Prénom</label>
-            <input type="text" id="firstname" name="firstname" value="Jane">
+            <input type="text" id="firstname" name="firstname" value="Jane" >
         </div>
         <div>
         <!-- Nom -->
@@ -46,7 +46,7 @@
 
          <div>
             <label for="nb_acc">Nombre d'accompagnants</label>
-            <input type="number" name="nb_acc" id="nb_acc" value="0">
+            <input type="number" name="nb_acc" id="nb_acc" value="0" min="0" max="2">
          </div>
 
          <div>

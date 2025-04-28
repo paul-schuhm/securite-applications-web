@@ -48,7 +48,6 @@ if ($isNbAccompagnyingClean) {
 //Regex a utiliser avec beaucoup de précaution
 //Heure : de 09:00 à 17:30, toutes les demi-heures
 $time = $_POST['time'];
-var_dump($time);
 // Syntaxe : preg_match(regex, variable à tester, tableau des matchs trouvés)
 //Tester les regex via des tests unitaires sur tout un tas de données différentes
 preg_match('/^(09|1[0-7]):(00|30)/', $time, $matches);
@@ -97,6 +96,19 @@ try {
 
 //Sanitization et échappement
 
+//Vérifier < 256char
+if(isset($_POST['firstname']) && strlen($_POST['firstname']) < 256){
+
+    //Sanitization : altérer input (retirer les balises)
+    //Sanitization : questions esthetiques
+    // $cleanFirstname = strip_tags($_POST['firstname']);
+    $clean['firstname'] = $_POST['firstname'];
+}
+
+if(isset($_POST['lastname']) && strlen($_POST['lastname']) < 256){
+    $clean['lastname'] = $_POST['lastname'];
+}
+
 
 //Champs présents est aussi une validation !
 $requiredData = ['firstname', 'lastname', 'sms_reminder', 'nb_acc'];
@@ -104,8 +116,13 @@ $cleanData = array_keys($clean);
 //...
 //Si toutes les clefs requises $requiredData sont présentes dans $cleanData, alors le rendez-vous peut être pris (déployer la logique métier en utilisant $clean)
 
+// if($error){
+//     Si erreurs, rediriger avec indication sur les erreurs
+//     header('Location: /?error=')
+// }
+
 $message = sprintf(
-    "%s %s, votre rendez-vous a bien été confirmé pour le %s à %.",
+    "%s %s, votre rendez-vous a bien été confirmé pour le %s à %s.",
     $clean['firstname'],
     $clean['lastname'],
     ($clean['date'])->format('d/m/Y'),
@@ -125,7 +142,7 @@ $message = sprintf(
 <body>
     <h1>Rendez-vous validé</h1>
     <p>
-        <?php echo $message;?>
+        <?php echo htmlentities($message);?>
     </p>
 </body>
 
